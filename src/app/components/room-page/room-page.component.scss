@@ -1,0 +1,22 @@
+.roomPage {
+  padding: 20px;
+  box-sizing: border-box;
+
+  &_card {
+    height: 80vh;
+
+    &_users {
+      flex-grow: 3;
+      flex-basis: 25%;
+    }
+
+    &_msgs {
+      flex-grow: 9;
+    }
+  }
+}
+.container {
+  &_item {
+    width: 50%;
+  }
+}

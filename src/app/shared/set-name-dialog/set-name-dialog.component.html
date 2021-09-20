@@ -1,0 +1,14 @@
+<form [formGroup]="nameForm" (submit)="submitForm()">
+  <h1 mat-dialog-title>{{data.header}}</h1>
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill">
+      <input matInput formControlName="name" required>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Отмена</button>
+    <button mat-button [disabled]="!nameForm.valid" cdkFocusInitial>
+      Сохранить
+    </button>
+  </div>
+</form>

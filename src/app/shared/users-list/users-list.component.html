@@ -1,0 +1,11 @@
+<div class="users">
+  <h2>Пользователи</h2>
+  <div class="users_item" *ngFor="let user of users">
+    <div class="users_item_content" [class.current]="user.id === currentUser.id">
+      <div >{{user.name}}</div>
+      <button mat-button *ngIf="user.id === currentUser.id" (click)="changeName()">
+        <mat-icon>mode_edit</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

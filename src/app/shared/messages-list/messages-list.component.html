@@ -1,0 +1,16 @@
+<div class="msgs">
+  <h2>Сообщения</h2>
+  <div class="msgs_container">
+    <div class="msgs_item" *ngFor="let message of messages" [class]="message.user === currentUser.id ? 'outgoing' : 'incoming'">
+      <div class="msgs_item_user">{{getUserName(message.user)}}</div>
+      <div class="msgs_item_text">{{message.body}}</div>
+      <div class="msgs_item_time">{{message.createdAt.toLocaleString('ru')}}</div>
+    </div>
+  </div>
+  <form class="msgs_form" [formGroup]="messageForm">
+    <mat-form-field>
+      <textarea matInput formControlName="message" placeholder="Введите сообщение..."></textarea>
+    </mat-form-field>
+    <button mat-button [disabled]="messageForm.invalid" (click)="sendMessage()"><mat-icon>send</mat-icon></button>
+  </form>
+</div>

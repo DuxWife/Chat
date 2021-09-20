@@ -1,0 +1,8 @@
+<div class="roomPage">
+  <h1>{{currentRoom?.name}}</h1>
+  <mat-card class="roomPage_card" fxLayout="row" fxLayout.xs="column">
+    <app-users-list *ngIf="currentRoom" [currentUser]="currentUser" [users]="currentRoom.users" class="roomPage_card_users" (changeNameEvent)="changeUserName($event)"></app-users-list>
+    <mat-divider [vertical]="true"></mat-divider>
+    <app-messages-list *ngIf="currentRoom" [currentUser]="currentUser" [users]="currentRoom.users" [messages]="currentRoom.messages" class="roomPage_card_msgs" (sendMessageEvent)="sendMessage($event)"></app-messages-list>
+  </mat-card>
+</div>

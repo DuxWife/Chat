@@ -1,0 +1,4 @@
+<div fxLayout="row" fxLayout.xs="column">
+  <app-users-list [currentUser]="currentUser" [users]="users" class="container_item" (changeNameEvent)="changeUserName($event)"></app-users-list>
+  <app-rooms-list [currentUser]="currentUser" [rooms]="rooms" class="container_item" (createRoomEvent)="createRoom($event)"></app-rooms-list>
+</div>

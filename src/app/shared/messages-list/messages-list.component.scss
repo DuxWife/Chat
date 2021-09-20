@@ -1,0 +1,52 @@
+.msgs {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &_container {
+    height: 100%;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  &_item {
+    max-width: 60%;
+    width: fit-content;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    &.outgoing {
+      background-color: #ccccff;
+      align-self: flex-end;
+    }
+    &.incoming {
+      background-color: #f6efe2;
+      align-self: flex-start;
+    }
+
+    &_user {
+      font-weight: 900;
+      margin-bottom: 5px;
+    }
+    &_text {
+      margin-bottom: 5px;
+    }
+    &_time {
+      opacity: 0.6;
+    }
+  }
+
+  &_form {
+    display: flex;
+
+    mat-form-field {
+      width: 100%;
+    }
+  }
+}

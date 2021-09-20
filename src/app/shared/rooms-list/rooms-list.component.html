@@ -1,0 +1,13 @@
+<div class="rooms">
+  <div class="rooms_header">
+    <h2>Комнаты</h2>
+    <button mat-mini-fab color="primary" (click)="createRoom()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <div class="rooms_item" *ngFor="let room of rooms">
+    <div class="rooms_item_content" [routerLink]="['room', room.id]">
+      <div >{{room.name}}</div>
+    </div>
+  </div>
+</div>
